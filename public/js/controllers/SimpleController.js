@@ -6,6 +6,8 @@ SimpleController.$inject = ['$scope', 'WeatherService'];
 
 function SimpleController($scope, WeatherService){
   $scope.message ='YOU TURKEY!';
-  WeatherService.getHourlyData(29, -82);
+  // WeatherService.getHourlyData(29, -82);
+  WeatherService.getDailyData(29, -82);
+  // WeatherService.getMinutelyData(29, -82);
 }
 })();
