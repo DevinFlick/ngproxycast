@@ -7,7 +7,8 @@
   function RouteConfig($routeProvider){
     $routeProvider
     .when('/', {
-      template: 'home'
+      templateURL: 'html/views/home.html',
+      controller: 'HomeController'
     })
     .when('/hourly',{
       template: 'hourly'
@@ -17,8 +18,10 @@
     })
     .when('/daily', {
       template:'daily'
+    })
+    .otherwise({
+      redirectTo:'/'
     });
 
-    // $locationProvider.html5Mode(true);
-  }
+    }
 })();
