@@ -2,9 +2,9 @@
   angular.module('ngWeather')
           .config(RouteConfig);
 
-  RouteConfig.$inject = ['$routeProvider'];
+  RouteConfig.$inject = ['$routeProvider', '$locationProvider'];
 
-  function RouteConfig($routeProvider){
+  function RouteConfig($routeProvider, $locationProvider){
     $routeProvider
     .when('/', {
       templateURL: 'html/views/home.html',
@@ -12,15 +12,15 @@
     })
     .when('/hourly',{
       templateURL: 'html/views/hourly.html',
-      controller: 'HourlyController'
+
     })
     .when('/minutely',{
       templateURL:'html/views/minutely.html',
-      controller: 'MinutelyController'
+
     })
     .when('/daily', {
       templateURL:'html/views/daily.html',
-      controller: 'DailyController'
+
     })
     .otherwise({
       redirectTo:'/'
