@@ -7,20 +7,20 @@
   function RouteConfig($routeProvider, $locationProvider){
     $routeProvider
     .when('/', {
-      templateURL: 'html/views/home.html',
+      templateUrl: 'html/views/home.html',
       controller: 'HomeController'
     })
     .when('/hourly',{
-      templateURL: 'html/views/hourly.html',
-
+      templateUrl: 'html/views/hourly.html',
+      controller: 'HourlyController'
     })
     .when('/minutely',{
-      templateURL:'html/views/minutely.html',
-
+      templateUrl:'html/views/minutely.html',
+      controller: 'MinutelyController'
     })
     .when('/daily', {
-      templateURL:'html/views/daily.html',
-
+      templateUrl:'html/views/daily.html',
+      controller: 'DailyController'
     })
     .otherwise({
       redirectTo:'/'
