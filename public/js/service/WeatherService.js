@@ -11,6 +11,9 @@
         'passphrase': passphrase
       }
     };
+    // var lat = locationService.latStore;
+    // var lon = locationService.lonStore;
+
     var service = {
       // left to right is from --> to  so from controller to service function right must match function below left must match controller
       getHourlyData: getHourlyData,
@@ -19,7 +22,7 @@
       weather: {}
     };
     return service;
-    
+
     function getHourlyData(lat, lon){
       var url = baseURL + 'forecast/hourly/' + lat + ',' + lon;
       return $http.get(url, config)
