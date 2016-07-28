@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-2">
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model = 'latitude' placeholder="Latitude:">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model = 'longitude' placeholder="Longitude:">
+        </div>
+      <div class="col-md-2 col-md-offset-2">
+        <a href="#/hourly" class="btn btn-primary btn-block" ng-click='updateHourly(latitude, longitude)'>Hourly</a>
+      </div>
+      <div class="col-md-2">
+        <a href="#/minutely" class="btn btn-primary btn-block" ng-click='updateMinutely(latitude, longitude)'>Minutely</a>
+      </div>
+      <div class="col-md-2">
+        <a href="#/daily" class="btn btn-primary btn-block" ng-click'updateDaily(latitude, longitude)'>Daily</a>
+      </div>
+    </div>
     <div ng-view></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
