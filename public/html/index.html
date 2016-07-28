@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="row">
+    <div class="row" ng-controller='LocationController'>
       <div class="col-md-2 col-md-offset-2">
         <div class="form-group">
           <input type="text" class="form-control" ng-model = 'latitude' placeholder="Latitude:">
@@ -16,13 +16,16 @@
           <input type="text" class="form-control" ng-model = 'longitude' placeholder="Longitude:">
         </div>
       <div class="col-md-2 col-md-offset-2">
-        <a href="#/hourly" class="btn btn-primary btn-block" ng-click='updatelocation(latitude, longitude)'>Hourly</a>
+        <a class="btn btn-primary btn-block" ng-click='updateLocation(latitude, longitude)'>Set Location</a>
       </div>
       <div class="col-md-2">
-        <a href="#/minutely" class="btn btn-primary btn-block" ng-click='updatelocation(latitude, longitude)'>Minutely</a>
+        <a href="#/hourly" class="btn btn-primary btn-block" ng-click='updateHourly(latitude, longitude)'>Hourly</a>
       </div>
       <div class="col-md-2">
-        <a href="#/daily" class="btn btn-primary btn-block" ng-click'updatelocation(latitude, longitude)'>Daily</a>
+        <a href="#/minutely" class="btn btn-primary btn-block" ng-click='updateLocation(latitude, longitude)'>Minutely</a>
+      </div>
+      <div class="col-md-2">
+        <a href="#/daily" class="btn btn-primary btn-block" ng-click'updateLocation(latitude, longitude)'>Daily</a>
       </div>
     </div>
     <div ng-view></div>
@@ -36,6 +39,8 @@
     <script src="js/controllers/HourlyController.js"></script>
     <script src="js/controllers/MinutelyController.js"></script>
     <script src="js/controllers/DailyController.js"></script>
+    <script src="js/controllers/LocationController.js"></script>
     <script src="js/service/WeatherService.js"></script>
+    <script src="js/service/LocationService.js"></script>
   </body>
 </html>

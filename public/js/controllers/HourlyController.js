@@ -6,6 +6,8 @@
 
   function HourlyController($scope, LocationService, WeatherService){
     $scope.hourlyData = WeatherService.weather;
+    $scope.latitude = LocationService.latStore;
+    $scope.longitude = LocationService.lonStore;
     $scope.summaryLookup = {
       'Drizzle': 'Fo shizzle there be some drizzle yo',
     };
@@ -14,5 +16,6 @@
     }, function(value){
       $scope.hourlyData = value;
     });
+
   }
 })();
