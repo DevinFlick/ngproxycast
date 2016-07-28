@@ -7,9 +7,18 @@
     $scope.updateHourly = updateHourly;
     $scope.updateMinutely = updateMinutely;
     $scope.updateDaily = updateDaily;
+    $scope.latitude = 29; //sets to gainesville latitude
+    $scope.longitude = -82; //sets to gainesville longitude
 
-    function updateHourly(latitude, longitude){}
-    function updateMinutely(latitude, longitude){}
-    function updateDaily(latitude, longitude){}
+    function updateHourly(latitude, longitude){
+      WeatherService.getHourlyData(latitude, longitude);
+    }
+
+    function updateMinutely(latitude, longitude){
+      WeatherService.getMinutelyData(latitude, longitude);
+    }
+    function updateDaily(latitude, longitude){
+      WeatherService.getDailyData(latitude, longitude);
+    }
   }
 })();
