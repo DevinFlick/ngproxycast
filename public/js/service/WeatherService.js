@@ -40,7 +40,7 @@
                   });
     }
     function getDailyData(lat, lon){
-      var url = baseURL + 'forecast/minutely/' + lat + ',' + lon;
+      var url = baseURL + 'forecast/daily/' + lat + ',' + lon;
       return $http.get(url, config)
                   .then(function(response){
                     service.weather = response.data;

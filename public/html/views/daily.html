@@ -1,1 +1,16 @@
-<h1>DAILY!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+      <h3>Lattitude {{dailyData.latitude}}, Longitude: {{dailyData.longitude}}</h3>
+    </div>
+  </div>
+  <div class="row jumbotron" ng-repeat='card in dailyData.daily'>
+    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 well">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h4>Day:{{card.time * 1000 | EEEE, MMMM d, y}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
