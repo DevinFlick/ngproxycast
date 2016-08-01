@@ -3,33 +3,34 @@
   <head>
     <meta charset ="UTF-8">
     <title>ngWeather</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
   </head>
   <body>
     <div style="margin-bottom: 200px">
-      <nav class='navbar navbar-fixed-top well'>
-        <div class="row" ng-controller='LocationController'>
-          <div class="col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-4">
-            <div class="form-group">
-              <input type="text" class="form-control" ng-model = 'latitude' placeholder="Latitude:">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" ng-model = 'longitude' placeholder="Longitude:">
-            </div>
-          <div class="col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-3">
-            <a href="#/hourly" class="btn btn-primary btn-block" ng-click='updateHourly(latitude, longitude)'>Hourly</a>
+      <nav class='navbar navbar-fixed-top well' ng-controller='LocationController'>
+        <div class="row">
+          <div class="form-group col-md-6 col-md-offset-3 col-sm-3 col-sm-offset-4">
+            <input type="text" class="form-control" ng-model = 'latitude' placeholder="Latitude:">
           </div>
-          <div class="col-md-3 col-sm-4">
-            <a href="#/minutely" class="btn btn-primary btn-block" ng-click='updateMinutely(latitude, longitude)'>Minutely</a>
+          <div class="form-group col-md-6 col-md-offset-3 col-sm-3 col-sm-offset-4">
+            <input type="text" class="form-control" ng-model = 'longitude' placeholder="Longitude:">
           </div>
-          <div class="col-md-3 col-sm-4">
-            <a href="#/daily" class="btn btn-primary btn-block" ng-click'updateDaily(latitude, longitude)'>Daily</a>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-3 col-sm-4 col-sm-offset-4">
+            <a href="#/hourly" class="btn btn-info btn-block" ng-click='updateHourly(latitude, longitude)'>Hourly</a>
+          </div>
+          <div class="col-md-2 col-sm-3">
+            <a href="#/minutely" class="btn btn-info btn-block" ng-click='updateMinutely(latitude, longitude)'>Minutely</a>
+          </div>
+          <div class="col-md-2 col-sm-3">
+            <a href="#/daily" class="btn btn-info btn-block" ng-click='updateDaily(latitude, longitude)'>Daily</a>
           </div>
         </div>
-      </nav>
-    </div>
-
+      </div>
+    </nav>
+  </div>
     <div ng-view></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>

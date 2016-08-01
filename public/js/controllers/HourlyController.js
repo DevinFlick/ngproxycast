@@ -9,7 +9,7 @@
     $scope.latitude = LocationService.latStore;
     $scope.longitude = LocationService.lonStore;
     $scope.summaryLookup = {
-      'Drizzle': 'Fo shizzle there be some drizzle yo',
+      'Drizzle': 'Light Sprinkle',
     };
     $scope.$watch(function (){
       return WeatherService.weather;

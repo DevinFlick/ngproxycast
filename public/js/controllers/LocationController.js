@@ -29,6 +29,7 @@ function updateMinutely(latitude, longitude){
 };
 
 function updateDaily(latitude, longitude){
+  console.log(latitude);
   WeatherService.getDailyData(latitude, longitude)
                 .then(function(){
                   $scope.weather = WeatherService.weather;

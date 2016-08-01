@@ -4,8 +4,8 @@
   WeatherService.$inject = ['$http'];
 
   function WeatherService($http){
-    var passphrase = 'i like cheese and bacon and some other things too';
-    var baseURL = 'https://quiet-bayou-88937.herokuapp.com/';
+    var passphrase = 'club 2025 is a great place to find friends';
+    var baseURL = 'https://proxycast.herokuapp.com/';
     var config = {
       headers: {
         'passphrase': passphrase
